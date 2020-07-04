@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8685484124A3EE7C008B9A71 /* HomeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685484024A3EE7C008B9A71 /* HomeDetailsVC.swift */; };
+		8685484424A58B4C008B9A71 /* HomesTableViewCellDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685484324A58B4C008B9A71 /* HomesTableViewCellDelegates.swift */; };
 		86D7648924995058005492AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D7648824995058005492AD /* AppDelegate.swift */; };
 		86D7648B24995058005492AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D7648A24995058005492AD /* SceneDelegate.swift */; };
 		86D7649024995059005492AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D7648E24995059005492AD /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		321F6CD6D95259EFCA3FBDA3 /* Pods-Mortgage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mortgage.release.xcconfig"; path = "Target Support Files/Pods-Mortgage/Pods-Mortgage.release.xcconfig"; sourceTree = "<group>"; };
 		8685484024A3EE7C008B9A71 /* HomeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsVC.swift; sourceTree = "<group>"; };
+		8685484324A58B4C008B9A71 /* HomesTableViewCellDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesTableViewCellDelegates.swift; sourceTree = "<group>"; };
 		86D7648524995058005492AD /* Mortgage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mortgage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D7648824995058005492AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D7648A24995058005492AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8685484224A58B09008B9A71 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8685484324A58B4C008B9A71 /* HomesTableViewCellDelegates.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		86D7647C24995058005492AD = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 			children = (
 				86D7648824995058005492AD /* AppDelegate.swift */,
 				86D7648A24995058005492AD /* SceneDelegate.swift */,
+				8685484224A58B09008B9A71 /* Delegates */,
 				86D7649E249950E6005492AD /* Model */,
 				86D7649D249950D1005492AD /* Model Controller */,
 				86D7649F249950FC005492AD /* Cells */,
@@ -256,6 +267,7 @@
 				86D764A9249976F2005492AD /* House.swift in Sources */,
 				86D764A124995198005492AD /* HomeVC.swift in Sources */,
 				86D7648924995058005492AD /* AppDelegate.swift in Sources */,
+				8685484424A58B4C008B9A71 /* HomesTableViewCellDelegates.swift in Sources */,
 				86D764A7249976A6005492AD /* HouseController.swift in Sources */,
 				86D764AB2499B17D005492AD /* DetailsVC.swift in Sources */,
 				86D764A3249952A0005492AD /* HomesTableViewCell.swift in Sources */,

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HomesTableViewCellDelegate2 {
+    func updateView()
+}
+
 class HomesTableViewCell: UITableViewCell {
     
     // Outlets
@@ -16,6 +20,12 @@ class HomesTableViewCell: UITableViewCell {
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
+
+    @IBOutlet var favoriteButton: UIButton!
+    
+    var delegate: HomesTableViewCellDelegates?
+    
+    var houseController = HouseController()
     
     var house: House? {
         didSet {
@@ -30,7 +40,21 @@ class HomesTableViewCell: UITableViewCell {
         stateLabel.text = house.stateName
         priceLabel.text = convertNumbertoCurrency(amount: house.priceName)
         photoView.image = house.image
+        
+        if house.favorite == true {
+            favoriteButton.setBackgroundImage(UIImage(named: "starColor"), for: .normal)
+        } else {
+            favoriteButton.setBackgroundImage(UIImage(named: "starGrey"), for: .normal)
+        }
     }
+    
+    
+    @IBAction func favoriteBtn(_ sender: UIButton) {
+        delegate?.toggleIsFavorite(for: self)
+    }
+    
+    
+    
     
     // Converting the number into currency
     func convertNumbertoCurrency(amount: Double) -> String {

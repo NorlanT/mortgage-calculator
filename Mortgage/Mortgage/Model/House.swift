@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct House: Codable {
+struct House: Codable, Equatable {
     var cityName: String
     var stateName: String
     var priceName: Double
@@ -17,12 +17,13 @@ struct House: Codable {
     var garageName: Int
     var introName: String
     var addressName: String
+    var favorite: Bool
     var imageString: String
     var image: UIImage {
     return UIImage(named: imageString)!
     }
     
-    init(cityName: String, stateName: String, priceName: Double, bedName: Int, bathName: Int, garageName: Int, introName: String, addressName: String, imageString: String) {
+    init(cityName: String, stateName: String, priceName: Double, bedName: Int, bathName: Int, garageName: Int, introName: String, addressName: String, favorite: Bool = false, imageString: String) {
         self.cityName = cityName
         self.stateName = stateName
         self.priceName = priceName
@@ -31,6 +32,7 @@ struct House: Codable {
         self.garageName = garageName
         self.introName = introName
         self.addressName = addressName
+        self.favorite = favorite
         self.imageString = imageString
     }
 }

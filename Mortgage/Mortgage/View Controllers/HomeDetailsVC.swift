@@ -27,7 +27,6 @@ class HomeDetailsVC: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     @IBOutlet var garageNameLabel: UILabel!
     @IBOutlet var introNameLabel: UITextView!
     
-    @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var calculateButton: UIButton!
     
     @IBOutlet var mapView: MKMapView!
@@ -54,17 +53,11 @@ class HomeDetailsVC: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
         locationManager.startUpdatingLocation()
         
         self.mapView.showsUserLocation = true
-        
-        
-        favoriteButton.layer.cornerRadius = 8
-        favoriteButton.clipsToBounds = true
 
         configureView()
   
         
     }
-    
-
     
     
     
